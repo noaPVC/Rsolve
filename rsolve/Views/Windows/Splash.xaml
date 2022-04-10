@@ -1,0 +1,22 @@
+﻿<Window x:Class="rsolve.SplashScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:rsolve"
+        mc:Ignorable="d"
+        Title="Rsolve"
+        Height="400" Width="600"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Icon="/Assets/rsolve_icon.ico"
+        ShowInTaskbar="False">
+    <Border Background="{DynamicResource Primary}"
+            MouseDown="DragWindow">
+        <Image Source="{DynamicResource SplashScreenImage}"
+               Width="300"
+               RenderOptions.BitmapScalingMode="HighQuality" />
+    </Border>
+</Window>

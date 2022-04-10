@@ -1,0 +1,23 @@
+﻿<Application x:Class="rsolve.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="Views/Windows/Splash.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- Theme only dev (remove in production) -->
+                <ResourceDictionary Source="Themes/Dark.xaml" />
+                
+                <!-- Animation and animation types -->
+                <ResourceDictionary Source="Themes/Animation/Animations.xaml" />
+                
+                <!-- Assets and resources -->
+                <ResourceDictionary Source="Assets/Icons/ToolbarIcons.xaml" />
+                <ResourceDictionary Source="Assets/Fonts/FontPaths.xaml" />
+
+                <!-- UI styling resources -->
+                <ResourceDictionary Source="Controls/ControlStyles/ToolbarIconStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

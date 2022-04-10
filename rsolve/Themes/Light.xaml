@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Colors and Brushes -->
+    <SolidColorBrush x:Key="Primary" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="PrimaryText" Color="#1B1B1B" />
+
+    <!-- TitleBar control Brushes -->
+    <SolidColorBrush x:Key="ToolbarGrayHover" Color="#808080" Opacity="0.2" />
+    <SolidColorBrush x:Key="ToolbarForegroundIconWhite" Color="#1B1B1B" Opacity="0.7" />
+
+    <!-- Images -->
+    <BitmapImage x:Key="TitleBarLogo" UriSource="/Assets/Images/Header/rsolve_header_light.png"/>
+    <BitmapImage x:Key="SplashScreenImage" UriSource="/Assets/Images/Splash/rsolve_splash_light.png"/>
+</ResourceDictionary>

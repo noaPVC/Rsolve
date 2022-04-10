@@ -1,0 +1,62 @@
+﻿<Window x:Class="rsolve.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xf="clr-namespace:XamlFlair;assembly=XamlFlair.WPF"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        xmlns:tb="http://www.hardcodet.net/taskbar"
+        mc:Ignorable="d"
+        Title="Rsolve"
+        Height="650" Width="1050"
+        MinWidth="450" MinHeight="600"
+        MaxHeight="{x:Static SystemParameters.MaximizedPrimaryScreenHeight}"
+        Background="Transparent"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="CanResize"
+        Icon="/Assets/rsolve_icon.ico">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="0" ResizeBorderThickness="2" />
+    </WindowChrome.WindowChrome>
+    <Border Background="{DynamicResource Primary}"
+            x:Name="RsolveMainBorder"
+            xf:Animations.Primary="{StaticResource FadeIn}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <Border Height="30"
+                    Background="Transparent"
+                    MouseDown="DragWindow">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Logo -->
+                    <Image Source="{DynamicResource TitleBarLogo}"
+                           HorizontalAlignment="Left"
+                           RenderOptions.BitmapScalingMode="HighQuality"
+                           Margin="6" />
+                    
+                    <!-- Titlebar control buttons -->
+                    <StackPanel Grid.Column="1"
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Right">
+                        <Button Content="{DynamicResource minimize}" Style="{StaticResource ToolbarIconStyle}" Click="MinimizeWindow" />
+                        <Button x:Name="WindowStateIcon" Content="{DynamicResource maximize}" Style="{StaticResource ToolbarIconStyle}" Click="ToggleWindowState" />
+                        <Button Content="{DynamicResource close}" Style="{StaticResource ToolbarIconStyle}" Click="CloseApp" Tag="IsClose" />
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+            <!-- Main content -->
+            <Grid Margin="5 0" Grid.Row="1"></Grid>
+        </Grid>
+    </Border>
+</Window>

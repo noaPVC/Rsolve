@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Assets\rsolve_icon.ico</ApplicationIcon>
+    <StartupObject></StartupObject>
+  </PropertyGroup>
+	
+  <ItemGroup>
+    <Resource Include="Assets\Fonts\OpenSans-Regular.ttf" />
+    <Resource Include="Assets\Fonts\Poppins-Regular.ttf" />
+    <Resource Include="Assets\Fonts\SourceSansPro-Regular.ttf" />
+    <Resource Include="Assets\Fonts\Ubuntu-Regular.ttf" />
+	<Resource Include="Assets\Fonts\SourceCodePro-Regular.ttf" />
+    <Resource Include="Assets\Illustrations\Gifs\cube_loader2.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Illustrations\Gifs\cube_loader.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Images\Header\rsolve_header_dark.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="1.1.0" />
+    <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.3.0" />
+    <PackageReference Include="XamlFlair.WPF" Version="1.2.13" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <Resource Include="Assets\Images\Header\rsolve_header_light.png" />
+    <Resource Include="Assets\Illustrations\Gifs\cube_loader3.gif" />
+    <Resource Include="Assets\Illustrations\Gifs\programmer2_ui_illustration.gif" />
+    <Resource Include="Assets\Illustrations\Gifs\programmer_ui_illustration.gif" />
+    <Resource Include="Assets\rsolve_icon.ico" />
+    <Resource Include="Assets\Images\Splash\rsolve_splash_dark.png" />
+    <Resource Include="Assets\Images\Splash\rsolve_splash_light.png" />
+  </ItemGroup>
+
+</Project>
