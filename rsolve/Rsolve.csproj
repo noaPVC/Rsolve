@@ -29,7 +29,7 @@
   <ItemGroup>
     <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="1.1.0" />
     <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
-    <PackageReference Include="MaterialDesignThemes" Version="4.3.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.6.0" />
     <PackageReference Include="XamlFlair.WPF" Version="1.2.13" />
   </ItemGroup>
 	
@@ -41,6 +41,10 @@
     <Resource Include="Assets\rsolve_icon.ico" />
     <Resource Include="Assets\Images\Splash\rsolve_splash_dark.png" />
     <Resource Include="Assets\Images\Splash\rsolve_splash_light.png" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <Folder Include="Commands\" />
   </ItemGroup>
 
 </Project>

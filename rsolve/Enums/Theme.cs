@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rsolve.DomainLogic.Models.Settings
+namespace Rsolve.Static.Theme
 {
-    public class Settings
+    public enum Theme
     {
-        public Settings()
-        {
-
-        }
+        Default, Light, Dark
     }
 }

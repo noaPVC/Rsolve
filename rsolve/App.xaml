@@ -6,7 +6,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <!-- Theme only dev (remove in production) -->
-                <ResourceDictionary Source="Themes/Dark.xaml" />
+                <ResourceDictionary Source="Themes/Light.xaml" />
                 
                 <!-- Animation and animation types -->
                 <ResourceDictionary Source="Themes/Animation/Animations.xaml" />

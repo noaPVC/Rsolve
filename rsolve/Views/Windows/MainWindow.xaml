@@ -6,6 +6,8 @@
         xmlns:xf="clr-namespace:XamlFlair;assembly=XamlFlair.WPF"
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         xmlns:tb="http://www.hardcodet.net/taskbar"
+        xmlns:vms="clr-namespace:Rsolve.ViewModels"
+        xmlns:converters="clr-namespace:Rsolve.Converters"
         mc:Ignorable="d"
         Title="Rsolve"
         Height="650" Width="1050"
@@ -20,6 +22,15 @@
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="0" ResizeBorderThickness="2" />
     </WindowChrome.WindowChrome>
+
+    <Window.DataContext>
+        <vms:MainViewModel />
+    </Window.DataContext>
+    
+    <Window.Resources>
+        <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    </Window.Resources>
+    
     <Border Background="{DynamicResource Primary}"
             x:Name="RsolveMainBorder"
             xf:Animations.Primary="{StaticResource FadeIn}">
@@ -56,7 +67,15 @@
             </Border>
 
             <!-- Main content -->
-            <Grid Margin="5 0" Grid.Row="1"></Grid>
+            <Grid Margin="5 0" Grid.Row="1">
+                <StackPanel HorizontalAlignment="Left" Margin="20 25">
+                    <Button Content="Test Check" Width="200" Height="35"
+                            FontSize="15" Command="{Binding ShowTextCommand}" />
+
+                    <TextBlock Text="Hallo Welt" Margin="0 15 0 0" FontSize="15"
+                               Visibility="{Binding IsShowTextTest, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                </StackPanel>
+            </Grid>
         </Grid>
     </Border>
 </Window>
